@@ -13,12 +13,12 @@ notes.post('/', (req, res) => {
 
     if (req.body) {
         const newNote = {
-           title,
-           text,
+            title,
+            text,
             id: uuidv4(),
         };
 
-        const data= readAndAppend(newNote, './db/tips.json');
+        const data = readAndAppend(newNote, './db/db.json');
         res.json(data);
     } else {
         res.error('Error in adding note');
